@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: blue ;
+}
+.slider-container{
+    background-color: gray;
+    width: 800px;
+    height: 250px;
+    margin: 0 auto;
+    position: relative;
+}
+.slider-container img{
+    width: 19%;
+    height: 200px;
+    opacity: 0;
+    transition: opacity 1s;
+    z-index: 1;
+}
+.slider-container img.active{
+    opacity: 1;
+    width: 90%;
+    top: 25px;
+    position: absolute;
+    left: 5%;
+}
+.slide-number{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 10px 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    font-size: 20px;
+    color: white;
+    z-index: 2;
+    border-radius: 6px;
+
+}
+.slider-controls{
+    width: 800px;
+    margin: 0px auto;
+    overflow: hidden;
+}
+.slider-controls .prev,
+.slider-controls .next{
+    background-color: rgb(84, 38, 122);
+    font-size: 16px;
+    width: 20%;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+    padding: 5px;
+}
+.slider-controls .prev{
+    float: left;
+}
+.slider-controls .next{
+    float: right;
+}
+.slider-controls .prev.disabled,
+.slider-controls .next.disabled{
+    background-color: rgb(175, 175, 198);
+    cursor: no-drop;
+}
+.slider-controls .indicators{
+    width: 60%;
+    float: left;
+}
+.slider-controls .indicators ul{
+    list-style: none;
+    text-align: center;
+    margin: 0;
+}
+.slider-controls .indicators ul li{
+    display: inline-block;
+    background-color: white;
+    color: blue;
+    height: 28px;
+    width: 28px;
+    border-radius: 4px;
+    font-weight: bold;
+    line-height: 28px;
+    margin: 0 2px;
+    cursor: pointer;
+}
+.slider-controls .indicators ul li.active{
+    background-color: green;
+    color: white;
+}
+
